@@ -169,6 +169,13 @@ nav {
     display: block;
 }
 
+.info hr {
+    border: none;
+    border-top: 3px solid #00bfa6;
+    width: 60px;
+    margin: 15px auto;
+}
+
 .mobile-menu .nav-link:hover {
     background-color: #FFFFFF;
 }
@@ -179,7 +186,7 @@ nav {
 }
 
 .info {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #e0f2f1;
     border-radius: 15px;
     padding: 30px;
     margin: 20px auto;

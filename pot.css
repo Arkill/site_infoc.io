@@ -1,0 +1,131 @@
+/* Estilo geral da seção .info */
+.info {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #f4f7fb; /* Cor de fundo suave */
+    margin: 50px auto;
+    max-width: 1100px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo do título dentro da seção .info */
+.info h2 {
+    font-size: 40px;
+    color: #1d3557; /* Cor mais intensa para destaque */
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Efeito de linha abaixo do título */
+.info h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ff6f61; /* Cor vibrante para o efeito */
+}
+
+/* Estilo do parágrafo dentro da seção .info */
+.info p {
+    font-size: 18px;
+    color: #4a4a4a; /* Texto claro, mas suave */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Estilo da lista dentro da seção .info */
+.info ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Layout de grid responsivo */
+    gap: 30px;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* Estilo dos itens da lista dentro da seção .info */
+.info li {
+    font-size: 18px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de transformação e sombra ao passar o mouse */
+.info li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1; /* Alteração suave de fundo no hover */
+}
+
+/* Estilo do texto em negrito dentro dos itens da lista */
+.info li strong {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1d3557; /* Cor intensa para destacar */
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Imagem ao lado do texto dentro dos itens da lista */
+.info li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagens específicas para cada categoria dentro da seção .info */
+.info .automacao::before {
+    background-image: url('img/auto.jpg');
+}
+
+.info .manutencao-predial::before {
+    background-image: url('img/predio.jpg');
+}
+
+.info .refrigeracao::before {
+    background-image: url('img/refrigeracao.jpg');
+}
+
+/* Responsividade para telas menores dentro da seção .info */
+@media (max-width: 768px) {
+    /* Ajuste no grid para telas menores */
+    .info ul {
+        grid-template-columns: 1fr 1fr; /* Dois itens por linha */
+    }
+
+    .info li {
+        flex-basis: 100%; /* Itens mais largos em telas menores */
+        padding: 20px;
+    }
+
+    .info h2 {
+        font-size: 28px;
+    }
+
+    .info li strong {
+        font-size: 20px;
+    }
+}
